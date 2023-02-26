@@ -1,28 +1,33 @@
 const express = require('express');
+const passport = require('passport');
+const User = require('/models/userM.js')
 
 
+const router = express.Router();
 
-const Router = express.Router();
 
-
-Router.get('/dashboard',(req,res)=>{
+router.get('/dashboard',(req,res)=>{
     res.render('home',{
         title:'authenticating'
     })
 });
-Router.get('/login',(req,res)=>{
+router.get('/login',(req,res)=>{
     res.render('login')
 });
-Router.get('/register',(req,res)=>{
+router.get('/register',(req,res)=>{
     res.render('register')
 });
-Router.post('/login',(req,res)=>{
+router.post('/login',(req,res)=>{
 });
 
-Router.post('/register',(req,res)=>{
-  
-    console.log(req.params)
-    console.log(req.body)
+router.post('/register',(req,res)=>{
+  const user ={ 
+    Username:req.body.username,
+    Email:req.body.Email,
+    FirstName:req.body.FirstName,
+    LastName:req.body.Lastname,
+}
+   
 })
 
 
@@ -34,4 +39,4 @@ Router.post('/register',(req,res)=>{
 
 
 
-module.exports = Router;
+module.exports = router;

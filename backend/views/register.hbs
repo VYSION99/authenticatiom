@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col sl6 m4">
-           <form action="/register" method="post">
+           <form  method="post">
             <h2 class="bg-green">form registeration</h2>
       <div class="input-field col s12 l6">
         <input type="text" id="first_name" name="FirstName" class="validate">
@@ -15,9 +15,13 @@
         <input type="email" id="email" name="Email" class="validate">
         <label for="email" data-error="wrong" data-success="right">Email</label>
       </div>
+      <div class="input-field col s12">
+        <input type="password" id="password" name="password" class="validate">
+        <label for="email" data-error="wrong" data-success="right">Password</label>
+      </div>
 
-<button class="btn waves-effect waves-light" type="submit" >Submit
-    <i class="material-icons right">send</i>
+<button class="btn waves-effect waves-light" type="button" onclick="register()" >Submit
+    
    </button>
 
 
