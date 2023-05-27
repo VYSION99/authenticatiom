@@ -1,4 +1,8 @@
-const register = async () => {
+
+/* .. registeration form data configuration
+
+document.querySelector('.register').addEventListener('click', async (e)=>{
+  
   const capitalize = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
   };
@@ -27,4 +31,7 @@ const register = async () => {
   FirstName.value = "";
   Email.value = "";
   password.value = "";
-};
+});
+*/
+M.AutoInit();
+

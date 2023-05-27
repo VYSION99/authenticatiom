@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const passportLocalMongoose =require('passport-local-mongoose');
 
-const UserShcema = mongoose.Schema();
- const User = new UserShcema({
-    email:{
+const Schema = mongoose.Schema;
+ const User = new Schema({
+    FullName:{
        type:String,
         required:true
     },
@@ -16,13 +16,13 @@ LastName:{
         type:String,
         required: true
     },
-    FirstNmae:{
+    FirstName:{
         type:String,
         required: true
     },
     Date:{
-        type:Date.now,
-        required:true
+        type:Date,
+        default:Date.now
         
     }
  });
